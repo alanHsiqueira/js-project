@@ -210,16 +210,23 @@ body {
   }
 }
 
-.js .js-tabcontent section{
+.js [data-tab="content"] section{
   display: none;
 }
 
-.js-tabcontent section.ativo{
+[data-tab="content"] section.ativo{
   display: block!important;
-  animation: show 0.5s forwards;
+}
+[data-tab="content"] section.ativo{
+  display: block!important;
+  animation: show-right 0.5s forwards;
+}
+[data-tab="content"] section.ativo{
+  display: block!important;
+  animation: show-down 0.5s forwards;
 }
 
-@keyframes show{
+@keyframes show-right{
   from{
     opacity: 0;
     transform: translate3d(-30px, 0, 0);  
@@ -229,21 +236,30 @@ body {
     transform: translate3d(0, 0, 0);
   }
 }
+@keyframes show-down{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -30, 0);  
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
-.js .js-accordion dd{
+.js [data-anime="accordion"] dd{
   display: none;
 }
 
-.js-accordion dt::after {
+[data-anime="accordion"] dt::after {
   content: '⬎';
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+[data-anime="accordion"] dt.ativo::after {
   content: '⬏';
 }
-
-.js-accordion dd.ativo{
+[data-anime="accordion"] dd.ativo{
   display: block;
   animation: slideDown 0.5s forwards;
 }
@@ -261,4 +277,15 @@ body {
 
 .faq-lista{
   cursor: pointer;
+}
+
+.js [data-anime="scroll"]{
+  opacity: 0;
+  transform: translate3d(-30px, 0px, 0);
+  transition: .3s;
+}
+.js [data-anime="scroll"].ativo{
+  opacity: 1;
+  transform: translate3d(-0, 0px, 0);
+ 
 }
