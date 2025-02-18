@@ -5,7 +5,7 @@ import initTabNav from "./modules/tab.js";
 import initModal from "./modules/modal.js"
 import initTooltip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js"; 
-import initOutsideClick from "./modules/outsideclick.js";
+import initMenuMobile from "./modules/menu-mobile.js"; 
 initScrollSuave(); 
 initAnimacaoScroll(); 
 initAccordion();
@@ -13,7 +13,7 @@ initTabNav();
 initModal();
 initTooltip();
 initDropdownMenu();
-initOutsideClick(); 
+initMenuMobile(); 
 
 
 
